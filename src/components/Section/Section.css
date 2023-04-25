@@ -1,0 +1,21 @@
+.section {
+  padding: 20px;
+  border: 2px solid black;
+  text-align: center;
+  width: 450px;
+  margin: 0 auto;
+  border-radius: 50px;
+}
+
+.section:first-child {
+  margin-top: 150px;
+}
+
+.section:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.sectionTitle {
+  font-size: 30px;
+  margin-top: 0;
+}
