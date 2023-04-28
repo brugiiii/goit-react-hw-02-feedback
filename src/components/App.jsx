@@ -11,10 +11,10 @@ export class App extends Component {
     bad: 0,
   };
 
-  onLeaveFeedback = e => {
-    const review = e.target.textContent.toLowerCase();
-
-    this.setState(prevState => ({ [review]: prevState[review] + 1 }));
+  onLeaveFeedback = review => {
+    this.setState(prevState => ({
+      [review]: prevState[review] + 1,
+    }));
   };
 
   countTotalFeedback = () =>

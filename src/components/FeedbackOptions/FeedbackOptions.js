@@ -8,7 +8,7 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
         <li key={option} className="optionsList__item">
           <button
             type="button"
-            onClick={onLeaveFeedback}
+            onClick={() => onLeaveFeedback(option.toLowerCase())}
             className="optionsList__button"
           >
             {option}
