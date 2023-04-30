@@ -1,27 +1,26 @@
 import PropTypes from 'prop-types';
-import './FeedbackOptions.css';
+import { Options, Button } from './FeedbackOptions.styles';
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
-    <ul className="optionsList">
+    <Options>
       {options.map(option => (
-        <li key={option} className="optionsList__item">
-          <button
+        <li key={option}>
+          <Button
             type="button"
             onClick={() => onLeaveFeedback(option.toLowerCase())}
-            className="optionsList__button"
           >
             {option}
-          </button>
+          </Button>
         </li>
       ))}
-    </ul>
+    </Options>
   );
 };
 
 FeedbackOptions.propTypes = {
-  options: PropTypes.arrayOf(PropTypes.string),
-  onLeaveFeedback: PropTypes.elementType,
+  options: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  onLeaveFeedback: PropTypes.func.isRequired,
 };
 
-// І тут те саме запитання що описав у файлі Section.js
+// Тут не забагато isRequired?))

@@ -1,18 +1,18 @@
 import PropTypes from 'prop-types';
-import './Section.css';
+import { SectionEl, Title } from './Section.styled';
 
 export const Section = ({ title, children }) => {
   return (
-    <section className="section">
-      <h2 className="sectionTitle">{title}</h2>
+    <SectionEl>
+      <Title>{title}</Title>
       {children}
-    </section>
+    </SectionEl>
   );
 };
 
 Section.propTypes = {
-  title: PropTypes.string,
-  children: PropTypes.element,
+  title: PropTypes.string.isRequired,
+  children: PropTypes.element.isRequired,
 };
 
 // Підскажіть будь ласка чи вірно описав проп тайпи, якщо я вірно зрозумів документацію, то для
